@@ -1,0 +1,24 @@
+{
+  "name": "learn-blockchain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "create-wallet.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andre4freelance/learn-blockchain.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andre4freelance/learn-blockchain/issues"
+  },
+  "homepage": "https://github.com/andre4freelance/learn-blockchain#readme",
+  "dependencies": {
+    "ethers": "^6.14.3",
+    "express": "^5.1.0"
+  }
+}
