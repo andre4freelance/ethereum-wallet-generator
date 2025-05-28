@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Wallet Full-Stack</title>
+    <link rel="stylesheet" href="/style.css"> 
+</head>
+<body>
+    <h1>Generator Wallet Ethereum (Full-Stack Node.js)</h1>
+    <p>Ini adalah aplikasi full-stack sederhana yang memungkinkan Anda membuat wallet Ethereum baru. Wallet ini dibuat menggunakan Node.js di backend dan JavaScript di frontend.</p>
+    <br>
+    <button id="generateWalletBtn">Buat Wallet Baru</button>
+
+    <div id="walletDetails" class="wallet-info hidden">
+        <h2>Detail Wallet Anda:</h2>
+        <p><strong>Alamat:</strong> <span id="address"></span></p>
+        <p class="sensitive"><strong>Private Key:</strong> <span id="privateKey"></span></p>
+        <p class="sensitive"><strong>Mnemonic Phrase:</strong> <span id="mnemonic"></span></p>
+    </div>
+
+    <div id="securityWarning" class="warning hidden">
+        <strong>PERINGATAN KEAMANAN PENTING:</strong>
+        <ul>
+            <li>Simpan <strong>Private Key</strong> dan <strong>Mnemonic Phrase</strong> Anda di tempat yang SANGAT AMAN dan OFFLINE.</li>
+            <li>JANGAN PERNAH membagikan Private Key atau Mnemonic Phrase Anda kepada siapapun.</li>
+            <li>Wallet yang dibuat di sini hanya untuk tujuan edukasi. Private key dikirim dari server ke browser Anda.</li>
+        </ul>
+    </div>
+    <div id="loadingMessage" class="hidden">Meminta wallet baru dari server...</div>
+
+    <script src="/client.js"></script> </body>
+</html>

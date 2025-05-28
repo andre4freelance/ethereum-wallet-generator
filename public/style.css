@@ -1,0 +1,10 @@
+body { font-family: Arial, sans-serif; margin: 20px; padding: 15px; background-color: #f4f4f4; }
+.container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+h1 { color: #333; }
+button { padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; margin-bottom: 15px; }
+button:hover { background-color: #0056b3; }
+.wallet-info { margin-top: 20px; padding: 15px; border: 1px solid #ddd; background-color: #f9f9f9; border-radius: 5px;}
+.sensitive { color: #dc3545; font-weight: bold; }
+.hidden { display: none; }
+.warning { color: #dc3545; font-weight: bold; margin-top: 20px; padding: 10px; border: 1px dashed #dc3545; background-color: #f8d7da; border-radius: 5px;}
+#loadingMessage { color: #007bff; }
