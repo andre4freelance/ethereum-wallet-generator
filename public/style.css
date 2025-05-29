@@ -8,3 +8,75 @@ button:hover { background-color: #0056b3; }
 .hidden { display: none; }
 .warning { color: #dc3545; font-weight: bold; margin-top: 20px; padding: 10px; border: 1px dashed #dc3545; background-color: #f8d7da; border-radius: 5px;}
 #loadingMessage { color: #007bff; }
+#authArea {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    background-color: #f9f9f9;
+}
+#loginFormArea div {
+    margin-bottom: 10px;
+}
+#loginFormArea label {
+    display: inline-block;
+    width: 80px;
+}
+#loginFormArea input {
+    padding: 5px;
+    width: 200px;
+}
+.message {
+    margin-top: 10px;
+    font-weight: bold;
+}
+#adminSection table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+#adminSection th, #adminSection td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-break: break-all; /* Agar teks panjang tidak merusak layout */
+}
+#adminSection th {
+    background-color: #f2f2f2;
+}
+.sensitive { 
+    color: #c0392b; /* Sudah ada, pastikan konsisten */
+    font-weight: bold; 
+}
+
+#adminSection table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    table-layout: auto; /* Atau 'fixed' jika Anda ingin kontrol lebih ketat, tapi 'auto' biasanya lebih fleksibel */
+}
+
+#adminSection th, #adminSection td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-break: break-all;
+}
+
+/* Tambahkan ini untuk kolom ID */
+#adminSection th:first-child, /* Menargetkan TH pertama (ID) */
+#adminSection td:first-child { /* Menargetkan TD pertama (ID) di setiap baris */
+    min-width: 40px; /* Coba nilai ini, sesuaikan jika perlu */
+    text-align: right; /* Opsional: membuat angka ID rata kanan */
+}
+
+/* Anda mungkin juga ingin mengatur lebar untuk kolom lain jika diperlukan */
+/* Misalnya, agar kolom 'Dibuat' tidak terlalu lebar jika tanggalnya panjang */
+#adminSection th:last-child,
+#adminSection td:last-child {
+    min-width: 150px; /* Sesuaikan */
+}
+
+
+#adminSection th {
+    background-color: #f2f2f2;
+}
