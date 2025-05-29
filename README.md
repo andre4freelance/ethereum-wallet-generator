@@ -44,7 +44,7 @@ Proyek ini dibuat untuk tujuan pembelajaran pengembangan aplikasi web dengan Nod
 
 ## Instalasi dan Menjalankan Proyek
 
-1.  **Clone Repository (Jika sudah ada di GitHub):**
+1.  **Clone Repository:**
     ```bash
     git clone git@github.com:andre4freelance/ethereum-wallet-generator.git
     cd ethereum-wallet-generator
@@ -57,7 +57,7 @@ Proyek ini dibuat untuk tujuan pembelajaran pengembangan aplikasi web dengan Nod
     ```
 
 3.  **Konfigurasi (Opsional):**
-    * Di `main.js` (atau `server.js`), Anda bisa mengubah `ADMIN_USER` dan `ADMIN_PASS` untuk kredensial login admin.
+    * Di `main.js`, Anda bisa mengubah `ADMIN_USER` dan `ADMIN_PASS` untuk kredensial login admin.
     * Anda juga bisa mengubah `secret` untuk `express-session` menjadi string yang lebih acak dan kuat.
 
 4.  **Jalankan Aplikasi Backend:**
@@ -80,7 +80,7 @@ Proyek ini dibuat untuk tujuan pembelajaran pengembangan aplikasi web dengan Nod
 
 1.  **Login Admin:**
     * Akses halaman utama. Anda akan diminta untuk login.
-    * Gunakan kredensial admin yang didefinisikan di `main.js` (default: `admin` / `password123` atau `admin` / `rahasiaku2025` sesuai versi terakhir Anda).
+    * Gunakan kredensial admin yang didefinisikan di `main.js` (default:`admin` / `rahasiaku2025`
 2.  **Buat Wallet Baru:**
     * Setelah login, tombol "Buat Wallet Baru" akan tersedia.
     * Klik tombol tersebut untuk menghasilkan wallet baru. Informasi alamat akan ditampilkan, dan semua detail (termasuk private key dan seed phrase) akan disimpan ke database.
