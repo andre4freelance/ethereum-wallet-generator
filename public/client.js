@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const addressSpan = document.getElementById('address');
     const privateKeySpan = document.getElementById('privateKey');
-    const mnemonicSpan = document.getElementById('mnemonic');
+    const secretSpan = document.getElementById('secret');
 
     generateWalletBtn.addEventListener('click', async () => {
         walletDetailsDiv.classList.add('hidden');
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             addressSpan.textContent = walletInfo.address;
             privateKeySpan.textContent = walletInfo.privateKey;
-            mnemonicSpan.textContent = walletInfo.mnemonic;
+            secretSpan.textContent = walletInfo.secret;
 
             walletDetailsDiv.classList.remove('hidden');
             securityWarningDiv.classList.remove('hidden');
