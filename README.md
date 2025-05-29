@@ -31,19 +31,6 @@ Proyek ini dibuat untuk tujuan pembelajaran pengembangan aplikasi web dengan Nod
 * **Database:**
     * SQLite 3
 
-## Struktur Proyek
-
-project-root/
-├── public/ # File frontend statis
-│ ├── index.html # Halaman utama UI
-│ ├── style.css # Styling halaman
-│ └── client.js # Logika JavaScript sisi klien
-├── main.js # (atau server.js) File utama aplikasi backend Express.js
-├── wallets.db # File database SQLite (akan dibuat otomatis)
-├── package.json
-└──package-lock.json
-
-
 
 ## Prasyarat
 
@@ -114,7 +101,3 @@ project-root/
 ## Kontribusi
 
 Jika Anda ingin berkontribusi, silakan fork repository ini dan buat pull request. Anda juga bisa membuka issue jika menemukan bug atau memiliki saran.
-
-## Lisensi
-
-Proyek ini bisa Anda gunakan di bawah Lisensi MIT (atau lisensi lain yang Anda pilih).
