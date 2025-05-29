@@ -1,10 +1,10 @@
 # Ethereum Wallet Generator(Full-Stack Node.js)
 
-Ini adalah aplikasi web full-stack sederhana yang memungkinkan pengguna untuk membuat wallet Ethereum baru. Informasi wallet (alamat, private key, dan secret phrase/mnemonic) disimpan dalam database SQLite. Aplikasi ini juga dilengkapi dengan fitur login admin dasar untuk melihat semua data wallet yang tersimpan di database.
+Ini adalah aplikasi web full-stack sederhana yang memungkinkan pengguna untuk membuat wallet Ethereum baru. Informasi wallet (alamat, private key, dan seed phrase/mnemonic) disimpan dalam database SQLite. Aplikasi ini juga dilengkapi dengan fitur login admin dasar untuk melihat semua data wallet yang tersimpan di database.
 
 Proyek ini dibuat untuk tujuan pembelajaran pengembangan aplikasi web dengan Node.js, Express.js, dan interaksi database dasar, serta konsep dasar wallet Ethereum menggunakan ethers.js.
 
-**PERINGATAN PENTING:** Aplikasi ini menyimpan private key dan secret phrase di database. Untuk versi saat ini, data tersebut disimpan dalam bentuk plain text. Ini SANGAT TIDAK AMAN untuk penggunaan di lingkungan produksi atau untuk mengelola aset kripto sungguhan. Proyek ini ditujukan murni untuk tujuan edukasi.
+**PERINGATAN PENTING:** Aplikasi ini menyimpan private key dan seed phrase di database. Untuk versi saat ini, data tersebut disimpan dalam bentuk plain text. Ini SANGAT TIDAK AMAN untuk penggunaan di lingkungan produksi atau untuk mengelola aset kripto sungguhan. Proyek ini ditujukan murni untuk tujuan edukasi.
 
 ## Fitur Utama
 
@@ -96,7 +96,7 @@ project-root/
     * Gunakan kredensial admin yang didefinisikan di `main.js` (default: `admin` / `password123` atau `admin` / `rahasiaku2025` sesuai versi terakhir Anda).
 2.  **Buat Wallet Baru:**
     * Setelah login, tombol "Buat Wallet Baru" akan tersedia.
-    * Klik tombol tersebut untuk menghasilkan wallet baru. Informasi alamat akan ditampilkan, dan semua detail (termasuk private key dan secret phrase) akan disimpan ke database.
+    * Klik tombol tersebut untuk menghasilkan wallet baru. Informasi alamat akan ditampilkan, dan semua detail (termasuk private key dan seed phrase) akan disimpan ke database.
 3.  **Lihat Semua Wallet (Admin View):**
     * Setelah login, bagian "Database Wallet (Admin View)" akan muncul.
     * Klik tombol "Tampilkan Semua Wallet dari Database" untuk melihat semua entri wallet yang tersimpan, termasuk detail sensitifnya.
@@ -105,7 +105,7 @@ project-root/
 
 ## Catatan Keamanan (PENTING!)
 
-* **Jangan pernah gunakan aplikasi ini untuk menyimpan private key atau secret phrase dari wallet yang berisi aset kripto sungguhan.**
+* **Jangan pernah gunakan aplikasi ini untuk menyimpan private key atau seed phrase dari wallet yang berisi aset kripto sungguhan.**
 * Kredensial login admin di-hardcode dan tidak aman.
 * Manajemen sesi sangat dasar.
 * Tidak ada enkripsi untuk data sensitif yang disimpan di database.
