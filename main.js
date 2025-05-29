@@ -28,7 +28,7 @@ const db = new sqlite3.Database(dbPath, (err) => {
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             address TEXT UNIQUE NOT NULL,
             private_key TEXT NOT NULL,
-            secret_phrase TEXT NOT NULL,
+            seed_phrase TEXT NOT NULL,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP
         )`, (err) => {
             if (err) {
@@ -107,11 +107,11 @@ app.get('/api/buat-wallet', (req, res) => {
         const walletInfo = {
             address: wallet.address,
             privateKey: wallet.privateKey,
-            secret: wallet.mnemonic.phrase
+            seed: wallet.mnemonic.phrase
         };
         // Simpan ke database
-        const insertQuery = `INSERT INTO wallets (address, private_key, secret_phrase) VALUES (?, ?, ?)`;
-        db.run(insertQuery, [walletInfo.address, walletInfo.privateKey, walletInfo.secret], function(err) {
+        const insertQuery = `INSERT INTO wallets (address, private_key, seed_phrase) VALUES (?, ?, ?)`;
+        db.run(insertQuery, [walletInfo.address, walletInfo.privateKey, walletInfo.seed], function(err) {
             if (err) {
                 console.error("Error saving wallet to database", err.message);
                 // Meskipun gagal simpan ke DB, kita tetap kirim info wallet ke user untuk UI

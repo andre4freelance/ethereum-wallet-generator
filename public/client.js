@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const walletDetailsDiv = document.getElementById('walletDetails');
     const addressSpan = document.getElementById('address'); // Hanya alamat untuk generate publik
     const newWalletPrivateKeySpan = document.getElementById('newWalletPrivateKey'); // Hanya private key untuk generate publik
-    const newWalletSecretPhraseSpan = document.getElementById('newWalletSecretPhrase'); // Hanya secret phrase untuk generate publik
+    const newWalletseedPhraseSpan = document.getElementById('newWalletseedPhrase'); // Hanya seed phrase untuk generate publik
     const loadingMessageDiv = document.getElementById('loadingMessage');
 
     const adminSection = document.getElementById('adminSection');
@@ -119,12 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 const walletInfo = await response.json();
                 if (addressSpan) addressSpan.textContent = walletInfo.address;
 
-                // Untuk menampilkan private key dan secret phrase
+                // Untuk menampilkan private key dan seed phrase
                 if (newWalletPrivateKeySpan && walletInfo.privateKey) {
                 newWalletPrivateKeySpan.textContent = walletInfo.privateKey;
                 }
-                if (newWalletSecretPhraseSpan && walletInfo.secret) {
-                newWalletSecretPhraseSpan.textContent = walletInfo.secret;
+                if (newWalletseedPhraseSpan && walletInfo.seed) {
+                newWalletseedPhraseSpan.textContent = walletInfo.seed;
                 }
 
                 if (walletDetailsDiv) walletDetailsDiv.classList.remove('hidden');
@@ -163,13 +163,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 const data = await response.json();
                 
                 if (data.wallets && data.wallets.length > 0) {
-                    let html = '<table><thead><tr><th>ID</th><th>Alamat</th><th>Private Key</th><th>Secret Phrase</th><th>Dibuat</th></tr></thead><tbody>';
+                    let html = '<table><thead><tr><th>ID</th><th>Alamat</th><th>Private Key</th><th>Seed Phrase</th><th>Dibuat</th></tr></thead><tbody>';
                     data.wallets.forEach(wallet => {
                         html += `<tr>
                                     <td>${wallet.id}</td>
                                     <td>${wallet.address}</td>
                                     <td class="sensitive">${wallet.private_key}</td>
-                                    <td class="sensitive">${wallet.secret_phrase}</td> 
+                                    <td class="sensitive">${wallet.seed_phrase}</td> 
                                     <td>${new Date(wallet.created_at).toLocaleString()}</td>
                                  </tr>`;
                     });
